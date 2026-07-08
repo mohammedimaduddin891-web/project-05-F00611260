@@ -1,0 +1,11 @@
+Project 5 — AI Usage
+
+AI was not used to build the initial detector logic or to make the first-pass traffic analysis.
+The baseline review and anomaly identification were done manually in the first phase.
+Subsequent AI support was only for editing language or for organizing documents.
+The final results and host names, anomaly classes and baseline evidence were checked by hand with baseline_flows.csv and window_flows.csv.
+
+Signed:
+Mohammed Imad Uddin
+Student ID: F00611260
+
