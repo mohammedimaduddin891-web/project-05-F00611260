@@ -1,0 +1,11 @@
+BASELINE PROFILE
+10.20.4.31  p95_bytes_out=6485  normal_destinations=['10.20.4.10', '140.82.112.3', '151.101.0.223']  normal_ports=[53, 123, 443]
+10.20.4.45  p95_bytes_out=2486  normal_destinations=['10.20.4.10', '10.20.4.20']  normal_ports=[53, 443, 5432]
+10.20.4.62  p95_bytes_out=910  normal_destinations=['10.20.4.50', '10.20.4.51']  normal_ports=[8080]
+10.20.4.77  p95_bytes_out=1700  normal_destinations=['10.20.4.20']  normal_ports=[443]
+\nFINDINGS
+[beaconing] host=10.20.4.62 ts=2026-06-18T01:05:00Z :: 4 repeated flows to 203.0.113.77:8443 every ~300 seconds with bytes_out jitter=0.0; destination/port not in baseline sets ['10.20.4.50', '10.20.4.51'] / [8080]
+[port_scan] host=10.20.4.77 ts=2026-06-18T01:22:14Z :: host touched 6 destinations on admin ports [22, 445, 3389]; baseline normal ports were [443]; new admin ports were [22, 445, 3389]
+[exfil] host=10.20.4.45 ts=2026-06-18T01:30:00Z :: bytes_out=1887436800 exceeded host p95=2486 by more than 10x; destination 198.51.100.42:443
+\nTotal findings: 3
+Human verdict required for every finding before any block or quarantine.
